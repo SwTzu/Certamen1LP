@@ -1,0 +1,29 @@
+# Define an asymmetric CA
+CA asymmetricCA;
+
+# Define cells to form an L-shaped grid
+cell asymmetricCA[0,0] { population = 100; susceptible = 90; infected = 10; };
+cell asymmetricCA[0,1] { population = 100; susceptible = 100; infected = 0; };
+cell asymmetricCA[1,0] { population = 100; susceptible = 100; infected = 0; };
+cell asymmetricCA[2,0] { population = 100; susceptible = 100; infected = 0; };
+
+# Note: Cells at positions [1,1], [2,1], etc., are not defined, creating asymmetry.
+
+# Set disease parameters
+set infection_rate = 0.3;
+set recovery_rate = 0.1;
+set incubation_rate = 0.2;
+
+# Set movement probability
+set movement_probability = 0.1;
+
+# Set time unit
+set time_unit = 1.0;
+
+# Advance the simulation
+advance 5 steps;
+
+# Define transition rules
+rule {
+    # The transition logic will be handled in the interpreter
+}

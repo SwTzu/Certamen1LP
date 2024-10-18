@@ -1,0 +1,94 @@
+# Define an ordinary CA
+CA region [3, 3];
+
+# Define cells with properties
+cell region[0,0] {
+    population = 100;
+    susceptible = 95;
+    exposed = 0;
+    infected = 5;
+    recovered = 0;
+};
+
+cell region[0,1] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[0,2] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[1,0] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[1,1] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[1,2] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[2,0] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[2,1] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+cell region[2,2] {
+    population = 100;
+    susceptible = 100;
+    exposed = 0;
+    infected = 0;
+    recovered = 0;
+};
+
+# Set disease parameters
+set infection_rate = 0.5;
+set recovery_rate = 0.1;
+set incubation_rate = 0.2;
+
+# Set movement probability (for scenario I)
+set movement_probability = 0.3;
+
+# Set time unit
+set time_unit = 1.0;
+
+# Advance the simulation
+advance 5 steps;
+
+# Define transition rules
+rule {
+    # The transition logic will be handled in the interpreter
+}
